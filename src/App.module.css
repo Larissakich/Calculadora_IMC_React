@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+.headerContainer {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.container {
+    display: flex;
+    gap:  80px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container .leftSide {
+    flex: 1;
+}
+
+.container .leftSide h1 {
+    font-size: 40px;
+    color: #3A4B5C;
+}
+
+.container .leftSide p {
+    margin: 20px 0px 40px 0px;
+}
+
+.container .leftSide input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(150, 163, 171, .5);
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: 0;
+}
+
+.container .leftSide input:disabled {
+    opacity: .5;
+}
+
+.container .leftSide button {
+    background-color: #227c9d;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 15px 0px;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: all ease .8s;
+}
+
+.container .leftSide button:hover {
+    opacity: 0.9;
+}
+
+.container .leftSide button:disabled {
+    opacity: .5;
+    cursor: inherit;
+}
+
+.container .rightSide {
+    flex: 1;
+    display: flex;
+}
+
+.container .rightSide .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .levelContainer {
+    display: flex;
+    flex: 1;
+}
+
+.container .rightSide .arrow {
+    position: absolute;
+    background-color: #227c9d;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -35px;
+    margin-top: 145px;
+    cursor: pointer;
+    transition: all ease .8s;
+}
+
+.container .rightSide .arrow:hover {
+    background-color: #2ba0ca;
+}
+
+
+@media screen and (max-width: 778px) {
+    header {
+        padding: 0px 20px;
+    }
+
+    .container {
+        padding: 0px 20px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .container .rightSide .arrow {
+        margin-left: 0;
+        margin-top: -35px;
+        rotate: 90deg;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container .rightSide .grid {
+        grid-template-columns: 1fr;
+    }
+}
